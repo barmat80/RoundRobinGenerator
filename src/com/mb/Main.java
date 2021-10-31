@@ -1,0 +1,37 @@
+package com.mb;
+
+import java.io.IOException;
+import java.util.ArrayList;
+
+import com.mb.logic.RoundRobinGenerator;
+import com.mb.model.Competitor;
+
+public class Main {
+
+	public static void main(String[] args) throws IOException {
+		boolean canGenerate = true;
+		if (args.length == 2) {
+			if(args[0].isEmpty()) {
+				Utilities.log("File with player/team list not provided.\nPlease provide a fullpath");
+				canGenerate = false;
+			}
+
+			if (args[1].isEmpty()) {
+				Utilities.log("Output File not provided.\nPlease provide a fullpath)");
+				canGenerate = false;
+			}
+		} else {
+			canGenerate = false;
+			Utilities.log(
+					"Incorrect Parameters\nUsage: java -jar roundRobinGenerator.jar com.mb.Main c:\\mydir\\inputList.txt c:\\mydir\\output.txt");
+		}
+
+		if (canGenerate) {
+			ArrayList<Competitor> competitors = Utilities.readTextFile(args[0]);
+			RoundRobinGenerator rrg = new RoundRobinGenerator(competitors);
+			rrg.create();
+			rrg.writeToFile(args[1]);
+		}
+	}
+
+}
