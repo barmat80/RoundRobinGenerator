@@ -58,7 +58,7 @@ public class RoundRobinGenerator {
 
 		// for each matchday, generate n/2 matches
 		for (int md = 1; md <= numberOfMatchDay; md++) {
-			Utilities.log("MatchDay " + md);
+			Utilities.debug("MatchDay " + md);
 
 			ArrayList<Match> matches = new ArrayList<>();
 
@@ -77,7 +77,7 @@ public class RoundRobinGenerator {
 
 			// rotate clockwise the lists
 			rotate(homeCompetitors, awayCompetitors);
-			Utilities.log("\n\n");
+			Utilities.debug("\n\n");
 		}
 	}
 
@@ -94,7 +94,7 @@ public class RoundRobinGenerator {
 		if (c1 != null && c2 != null) {// found both competitors, we can try to create the match
 			Match match = new Match(c1, c2);
 
-			Utilities.log(c1.getName() + " v " + c2.getName());
+			Utilities.debug(c1.getName() + " v " + c2.getName());
 
 			c1.setPicked();
 			c2.setPicked();
@@ -103,11 +103,11 @@ public class RoundRobinGenerator {
 		} else {
 			// At least one competitor is not correctly picked...this should never happen
 			if (c1 == null) {
-				Utilities.log("No player 1 selected on matchday " + matchday);
+				Utilities.debug("No player 1 selected on matchday " + matchday);
 			}
 
 			if (c2 == null) {
-				Utilities.log("No player 2 selected on matchday " + matchday);
+				Utilities.debug("No player 2 selected on matchday " + matchday);
 			}
 		}
 		return null;// this should never happen

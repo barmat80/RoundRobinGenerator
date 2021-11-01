@@ -17,4 +17,4 @@ In the output file you will see something like "Rest: Competitor" as the last li
 
 ## Usage
 
-java -jar roundRobinGenerator.jar com.mb.Main "C:\mydir\list.txt" "C:\mydir\output.txt" 
+java -jar roundRobinGenerator.jar C:\mydir\list.txt C:\mydir\output.txt 

@@ -32,4 +32,10 @@ public class Utilities {
 	public static void log(Object o) {
 		System.out.println(o);
 	}
+
+	public static void debug(Object o) {
+		if (false) {
+			System.out.println(o);
+		}
+	}
 }

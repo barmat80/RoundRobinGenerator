@@ -2,6 +2,7 @@ package com.mb;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 import com.mb.logic.RoundRobinGenerator;
 import com.mb.model.Competitor;
@@ -9,7 +10,10 @@ import com.mb.model.Competitor;
 public class Main {
 
 	public static void main(String[] args) throws IOException {
+		Utilities.debug(Arrays.toString(args));
+
 		boolean canGenerate = true;
+
 		if (args.length == 2) {
 			if(args[0].isEmpty()) {
 				Utilities.log("File with player/team list not provided.\nPlease provide a fullpath");
@@ -31,6 +35,8 @@ public class Main {
 			RoundRobinGenerator rrg = new RoundRobinGenerator(competitors);
 			rrg.create();
 			rrg.writeToFile(args[1]);
+
+			Utilities.log("Round Robin Generated.\nSee file in " + args[1]);
 		}
 	}
 
