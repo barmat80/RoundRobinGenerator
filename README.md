@@ -17,4 +17,6 @@ In the output file you will see something like "Rest: Competitor Name" as the la
 
 ## Usage
 
+```
 java -jar roundRobinGenerator.jar C:\mydir\list.txt C:\mydir\output.txt 
+```
