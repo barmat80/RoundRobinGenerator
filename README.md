@@ -1,8 +1,10 @@
 # Round Robin Generator
 
-## Scope
+CLI generator of fixtures of a Round-Robin Tournament.
 
-This is a CLI generator of fixtures of a Round-Robin Tournament.
+Download the latest release from the **[Releases](https://github.com/barmat80/RoundRobinGenerator/releases)** page.
+
+## How it works
 
 You can pass a list of competitors (players, teams or whatever you want) via simple text file (1 competitor per line).
 For an example, see playerList.txt in "resources" directory.
