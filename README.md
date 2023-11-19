@@ -1,9 +1,9 @@
 # Round Robin Generator
 
-![latest commit](https://img.shields.io/github/last-commit/barmat80/RoundRobinGenerator?color=red)
+![latest commit](https://img.shields.io/github/last-commit/barmat80/RoundRobinGenerator?color=blue)
 ![latest release](https://img.shields.io/github/v/release/barmat80/RoundRobinGenerator?color=green)
 
-CLI generator of fixtures of a Round-Robin Tournament.
+a Java CLI generator of fixtures of a Round-Robin Tournament.
 
 ## How it works
 
