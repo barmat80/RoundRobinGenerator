@@ -5,7 +5,7 @@
 This is a CLI generator of fixtures of a Round-Robin Tournament.
 
 You can pass a list of competitors (players, teams or whatever you want) via simple text file (1 competitor per line).
-For an example, see playerList.txt in "res" directory.
+For an example, see playerList.txt in "resources" directory.
 
 See https://en.wikipedia.org/wiki/Round-robin_tournament for more information.
 

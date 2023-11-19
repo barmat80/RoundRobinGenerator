@@ -1,0 +1,28 @@
+<project default="create_jar" name="roundRobinGenerator">
+	<property name="company" value="barmat80"/>
+	<property name="devs" value="mb"/>
+	<property name="dir.src" value="src"/>
+	<property name="dir.bin" value="bin"/>
+	<property name="dir.dist" value="dist"/>
+	<property name="jar.name" value="roundRobinGenerator.jar"/>
+	
+	<tstamp>
+		<format property="TODAY" pattern="yyyy-MM-dd HH:mm:ss"/>
+	</tstamp>
+	
+	<target name="create_jar">
+		<jar destfile="${dir.dist}/${jar.name}">
+			<manifest>
+				<attribute name="Built-By" value="${company}"/>
+				<attribute name="Built-Date" value="${TODAY}"/>
+				<attribute name="authors" value="${devs}"/>
+                <attribute name="Main-Class" value="com.bm.rrg.Main"/>
+			</manifest>
+			
+			<fileset dir="${dir.src}"/>
+			<fileset dir="${dir.bin}"/>
+		</jar>	
+	</target>
+	
+	<!--<copy ></copy>-->
+</project>
